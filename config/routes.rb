@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get 'welcome/index' 
+  # https://ruby-on-rails-austinpierce956002.codeanyapp.com/welcome/index
 
   root 'welcome#index'
   
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :articles
+  
 end
