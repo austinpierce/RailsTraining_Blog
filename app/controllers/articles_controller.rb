@@ -5,13 +5,17 @@ class ArticlesController < ApplicationController
   end
   
   def new
+    @article = Article.new
   end
   
   def create
     @article = Article.new(article_params) 
     # Article is referring to the class in models/article.rb
-    @article.save
-    redirect_to @article
+    if @article.save
+      redirect_to articles_path
+    else
+      render 'new'
+    end
   end
   
   def show
