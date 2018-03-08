@@ -7,4 +7,10 @@
   <%= comment.body %>
 </p>
 
+<p>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?'} %>
+</p>
+
 <% # this will loop through each comment, which is why this page doesn't need the loop %>
