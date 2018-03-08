@@ -9,6 +9,9 @@
 </p>
 
 <%= link_to 'Back to all', articles_path %> |
-<%= link_to 'Edit Article', edit_article_path %>
+<%= link_to 'Edit Article', edit_article_path %> |
+<%= link_to 'Destroy', article_path(@article),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
 
 <% # calling the instance variable @article in show method in controller %>
